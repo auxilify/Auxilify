@@ -1,0 +1,1013 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+}
+body{
+    background-color: black;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+     scrollbar-width: none;  /* Firefox */
+}
+h1{
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: white;
+}
+p{
+    font-family: 'Source Sans Pro', sans-seriff;
+    color: white;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background: url(images/background.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+.content-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+.line{
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(160deg, #0a5a6e, #3ef9ff, rgb(4, 194, 115));
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li a{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 17px;
+}
+nav ul li a:hover{
+    transition: 0.3s;
+    background: #3ef9ff;
+    color: black;
+    font-weight: bold;
+    box-shadow: 4px 4px 3px rgba(255, 255, 255, 0.2);
+}
+.content h1{
+    color:white;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 55px;
+    margin: 30px 80px;
+    text-align: center;
+}
+.content{
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    align-items: center;
+}
+.content .btn{
+    display: inline-block;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(69, 69, 69);
+    font-size: 23px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.content .btn:hover{
+    background: linear-gradient(160deg, #0a5a6e, #3ef9ff, rgb(4, 194, 115));
+    color: black;
+    box-shadow: 3px 3px rgba(49,49,49);
+    transition: 0.3s;
+}
+.info-container h1{
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.info-container span{
+    display: flex;
+}
+.info-container span .info-text{
+    padding-left: 100px;
+    padding-top: 100px;
+}
+.info-container ul li, .info-container p{
+    font-family: 'Source Sans Pro', sans-seriff;
+    color: white;
+    font-size: 25px;
+    line-height: 175%;
+}
+.info-container ul li{
+    margin-left: 50px;
+}
+.info-container span .info-text{
+    height: calc(100vh - 100px);
+    width: 60%;
+}
+.info-container span .icon-box {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-container span .icon-box img{
+    width: 200px;
+    height: 200px;
+}
+.info-container{
+    width: 100%;
+}
+.info-container a{
+    color:rgb(4, 194, 115);
+}
+#policy .info-text p, #policy .info-text ul li{
+    font-size: 20px;
+}
+
+
+@media only screen and (min-width: 240px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 12px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 75px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    nav ul li a{
+        padding: 6px 3px;
+        font-size: 8px;
+    }
+    .info-container p{
+        font-size: 13.5px;
+        line-height: 130%;
+    }
+    .info-container ul li{
+        font-size: 13.5px;
+        line-height: 130%;
+        margin-left: 25px;
+    }
+}
+@media only screen and (min-width: 280px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 11px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 75px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    nav ul li a{
+        padding: 6px 7px;
+        font-size: 10px;
+    }
+    .info-container p{
+        font-size: 13.5px;
+        line-height: 130%;
+    }
+    .info-container ul li{
+        font-size: 13.5px;
+        line-height: 130%;
+        margin-left: 25px;
+    }
+} /* Galaxy Fold */
+@media only screen and (min-width: 320px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 10.5px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 100px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    nav ul li a{
+        padding: 11px 7px;
+        font-size: 10px;
+    }
+    .info-container p{
+        font-size: 13.5px;
+        line-height: 130%;
+    }
+    .info-container ul li{
+        font-size: 13.5px;
+        line-height: 130%;
+        margin-left: 25px;
+    }
+} /* iPhone 5/SE */
+@media only screen and (min-width: 360px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 12px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 15px 15px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 100px;
+    }
+    nav ul li a{
+        padding: 11px 11px;
+        font-size: 12px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container ul li{
+        font-size: 15px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+    .info-container p{
+        font-size: 14.5px;
+        line-height: 130%;
+    }
+} /* Moto G4, Galaxy S5 */
+@media only screen and (min-width: 375px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 12px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 100px;
+    }
+    nav ul li a{
+        padding: 11px 11px;
+        font-size: 12px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 15px;
+        line-height: 150%;
+    }
+    .info-container ul li{
+        font-size: 15px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+} /* iPhone 6/7/8 */
+@media only screen and (min-width: 375px) and (min-height: 812px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 13px;
+    }
+    .content h1{
+        font-size: 25px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 120px;
+    }
+    nav ul li a{
+        padding: 13px 8px;
+        font-size: 12px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .info-container ul li{
+        font-size: 17px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+} /* iPhone X */
+@media only screen and (min-width: 411px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 13px;
+    }
+    .content h1{
+        font-size: 25px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 100px;
+    }
+    nav ul li a{
+        padding: 11px 11px;
+        font-size: 12px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 17px;
+        line-height: 150%;
+    }
+    .info-container ul li{
+        font-size: 17px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+} /*  */
+@media only screen and (min-width: 411px) and (min-height: 731px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 13px;
+    }
+    .content h1{
+        font-size: 25px;
+        margin: 15px 10px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 125px;
+    }
+    nav ul li a{
+        padding: 14px 7px;
+        font-size: 15px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 17px;
+        line-height: 150%;
+    }
+    .info-container ul li{
+        font-size: 17px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+} /* Pixel 2 */
+@media only screen and (min-width: 411px) and (min-height: 823px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 14px;
+    }
+    .content h1{
+        font-size: 25px;
+        margin: 15px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 150px;
+    }
+    nav ul li a{
+        padding: 18px 9px;
+        font-size: 13px;
+    }
+    nav{
+        padding-left: 0px;
+    }
+    .info-container h1{
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+    .info-container span .icon-box {
+        width: 0;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 10px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 17px;
+        line-height: 150%;
+    }
+    .info-container ul li{
+        font-size: 17px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+} /* Pixel 2 XL */
+@media only screen and (min-width: 540px) and (min-height: 720px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 14px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 25px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 15px;
+        padding: 10px 25px;
+        margin-bottom: 40px;
+    }
+    .logo{
+        width: 160px;
+    }
+    nav ul li a{
+        padding: 18px 10px;
+        font-size: 15px;
+    }
+    nav{
+        padding-left: 40px;
+    }
+    .info-container h1{
+        font-size: 55px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+    .info-container span .icon-box {
+        width: 0%;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 25px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 17px;
+        line-height: 150%;
+    }
+    .info-container ul li{
+        font-size: 17px;
+        line-height: 150%;
+        margin-left: 25px;
+    }
+} /* Surface Duo */
+@media only screen and (min-width: 600px) and (min-height: 1024px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 14px;
+    }
+    .content h1{
+        font-size: 20px;
+        margin: 25px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 15px;
+        padding: 10px 25px;
+        margin-bottom: 40px;
+    }
+    .logo{
+        width: 160px;
+    }
+    nav ul li a{
+        padding: 18px 10px;
+        font-size: 15px;
+    }
+    nav{
+        padding-left: 40px;
+    }
+    .info-container h1{
+        font-size: 55px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    .info-container span .icon-box {
+        width: 0%;
+    }
+    .info-container span .icon-box img{
+        display: none;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 50px);
+        width: 100%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 20px;
+        line-height: 175%;
+    }
+    .info-container ul li{
+        font-size: 20px;
+        line-height: 175%;
+        margin-left: 25px;
+    }
+} /* */
+@media only screen and (min-width: 768px) and (min-height: 1024px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 16px;
+    }
+    .content h1{
+        font-size: 40px;
+        margin: 25px 20px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 25px;
+        padding: 10px 30px;
+        margin-bottom: 40px;
+    }
+    .logo{
+        width: 160px;
+    }
+    nav ul li a{
+        padding: 18px 13px;
+        font-size: 18px;
+    }
+    nav{
+        padding-left: 20px;
+    }
+    .info-container h1{
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .info-container span .info-text{
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    .info-container span .icon-box {
+        width: 30%;
+    }
+    .info-container span .icon-box img{
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 50px);
+        width: 70%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 20px;
+        line-height: 175%;
+    }
+    .info-container ul li{
+        font-size: 20px;
+        line-height: 175%;
+        margin-left: 25px;
+    }
+} /* iPad */
+@media only screen and (min-width: 900px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 15px;
+    }
+    .content h1{
+        font-size: 35px;
+        margin: 30px 80px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 23px;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+    }
+    .logo{
+        width: 160px;
+    }
+    nav ul li a{
+        padding: 15px 16px;
+        font-size: 17px;
+    }
+    nav{
+        padding-left: 60px;
+    }
+    .info-container h1{
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+    .info-container span .icon-box {
+        width: 40%;
+    }
+    .info-container span .icon-box img{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 50px);
+        width: 60%;
+    }
+    .info-container p{
+        font-size: 20px;
+        line-height: 175%;
+    }
+    .info-container ul li{
+        font-size: 20px;
+        line-height: 175%;
+        margin-left: 50px;
+    }
+} /* */
+@media only screen and (min-width: 1024px) and (min-height: 1366px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 19px;
+    }
+    .content h1{
+        font-size: 40px;
+        margin: 50px 40px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 25px;
+        padding: 15px 35px;
+        margin-bottom: 40px;
+    }
+    .logo{
+        width: 250px;
+    }
+    nav ul li a{
+        padding: 27px 20px;
+        font-size: 25px;
+    }
+    nav{
+        padding-left: 40px;
+    }
+    .info-container h1{
+        font-size: 75px;
+        margin-bottom: 50px;
+    }
+    .info-container span .info-text{
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+    .info-container span .icon-box {
+        width: 40%;
+    }
+    .info-container span .icon-box img{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 100px);
+        width: 60%;
+        margin-right: 25px;
+    }
+    .info-container p{
+        font-size: 25px;
+        line-height: 175%;
+    }
+    .info-container ul li{
+        font-size: 25px;
+        line-height: 175%;
+        margin-left: 50px;
+    }
+} /* iPad Pro */
+@media only screen and (min-width: 1280px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 18px;
+    }
+    .content h1{
+        font-size: 35px;
+        margin: 30px 80px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 23px;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+    }
+    .logo{
+        width: 160px;
+    }
+    nav ul li a{
+        padding: 15px 16px;
+        font-size: 17px;
+    }
+    nav{
+        padding-left: 60px;
+    }
+    .info-container h1{
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+    .info-container span .icon-box {
+        width: 40%;
+    }
+    .info-container span .icon-box img{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 50px);
+        width: 60%;
+    }
+    .info-container p{
+        font-size: 20px;
+        line-height: 175%;
+    }
+    .info-container ul li{
+        font-size: 20px;
+        line-height: 175%;
+        margin-left: 50px;
+    }
+} /* */
+@media only screen and (min-width: 1440px){
+    #policy .info-text p, #policy .info-text ul li{
+        font-size: 20px;
+    }
+    .content h1{
+        font-size: 55px;
+        margin: 30px 80px;
+        text-align: center;
+    }
+    .content .btn{
+        font-size: 23px;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+    }
+    .logo{
+        width: 160px;
+    }
+    nav ul li a{
+        padding: 15px 16px;
+        font-size: 17px;
+    }
+    nav{
+        padding-left: 60px;
+    }
+    .info-container h1{
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+    .info-container span .info-text{
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+    .info-container span .icon-box {
+        width: 40%;
+    }
+    .info-container span .icon-box img{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+    .info-container span .info-text{
+        height: calc(100vh - 50px);
+        width: 60%;
+    }
+    .info-container p{
+        font-size: 22px;
+        line-height: 175%;
+    }
+    .info-container ul li{
+        font-size: 25px;
+        line-height: 175%;
+        margin-left: 50px;
+    }
+} /* */

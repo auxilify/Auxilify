@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <link rel="stylesheet" href="instructional.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo-icon.png" type="image/png">
+    <title>Auxilify - For students, from students</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/logo-colored.png" alt="Auxilify" class="logo"></a>
+        </div>
+        <div class="content">
+            <div class="price-calculator-container">
+                <div class="price-calculator">
+                    <h1>Price Calculator</h1>
+                    <span class="price-calculator-content">
+                        <div class="work-type">
+                            <p>Work Type</p>
+                            <select id="work-type" onchange="calculateFunction();">
+                                <option value="ixl-topics">IXL Topics</option>
+                                <option value="geometry-nation-test">Geometry Nation: Test Yourself</option>
+                                <option value="algebra-nation-test">Algebra Nation: Test Yourself</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="quantity">
+                            <p>Amount</p>
+                            <input type="number" value="0" min="0" step="1" max="100" id="quantity" onkeyup="calculateFunction();" onclick="calculateFunction();">
+                        </div>
+                        <div class="cost">
+                            <p>Total Cost (USD)</p>
+                            <h1 id="total-cost">$0</h1>
+                        </div>
+                    </span>
+                </div>
+                <div class="dogg-house"><img src="images/dogg.gif" id="dogg" alt="snoop dogg"></div>
+            </div>
+            <span class="instructions-form-container">
+                <div class="instructions">
+                    <h1>Instructions</h1>
+                    <p>Auxilify is an unofficial corporation that does your online work in exchange for some money. To learn more about us you can click <a href="index.html#about">here</a>. In order for us to recieve your work you have to email us the work details and we will either accept the work request or decline it. We would only decline requests if we are unable to do it or if you are blacklisted, as stated in our <a href="index.html#policy">Policy</a>.</p>
+                    <p>The format in which the details is listed in the email will be generated for you to copy and paste after you fill out the form. The email will then be sent to team.auxilify@gmail.com where your order will be reviewed.</p>
+                    <p>You can use the price calculator above if you would like to know our offered prices as of right now.</p>
+                </div>
+                <div class="work-form" id="work-form">
+                    <div class="title">
+                        <h1>Work Form</h1>
+                    </div>
+                    <span>
+                        <div class="labels">
+                            <p>Work type</p>
+                            <p>Work description</p>
+                            <p>Due date</p>
+                            <p>Exchange type</p>
+                            <p>Grade goal %</p>
+                        </div>
+                        <div class="inputs">
+                            <input id="work-form-work-type" placeholder="Example: &quot;IXL topics&quot;" type="text">
+                            <input id="work-form-work-description" placeholder="Example: &quot;E.4 and E.6 on geometry level IXL&quot;"type="text">
+                            <input id="work-form-due-date" placeholder="Example: Jan. 15, 2021" type="text">
+                            <select id="work-form-exchange-type">
+                                <option value="none-selected">--Select--</option>
+                                <option value="50-50">50/50 - You pay 50% before then pay the other 50% after we do the work</option>
+                                <option value="100-before">100% before - You pay us 100% of the payment before we do the work</option>
+                                <option value="cash-payment">Cash Payment - Only certain Florida schools are eligible</option>
+                            </select>
+                            <input id="work-form-grade-goal" type="number" min="0" step="1" max="100">
+                        </div>
+                    </span>
+                    <div class="button-container"><button onclick="checkInputs();">Generate Email Text</button></div>
+                </div>
+                <div class="copy-text-container" id="copy-text-container">
+                    <div class="copy-text-title"><h1>Email Template</h1></div>
+                    <div class="copy-text">
+                        <p id="text-to-copy">Lorem Ipsum</p>
+                    </div>
+                    <div class="button-container">
+                        <button class="copy-text-button" id="copy-text-button" onclick="copyToClipboard();">Copy Text</button>
+                    </div>
+                    <div class="back-button-container">
+                        <button onclick="showWorkForm();" class="back-button">&lt Back to work form</button>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
