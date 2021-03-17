@@ -41,10 +41,10 @@ function calculateFunction(){
     calculate();
     calculate();
 }
-function workFormSubmit(workType, workDesc, dueDate, exchangeType, gradeGoal){
+function workFormSubmit(workType, workDesc, dueDate, exchangeType, school, gradeGoal){
     var copyButton = document.getElementById("copy-text-button");
     var copyText = document.getElementById("text-to-copy");
-    var text = "Work Type: " + workType + "<br>Work Description: " + workDesc + "<br>Due Date: " + dueDate + "<br>Exchange Type: " + exchangeType + "<br>Grade Goal %: " + gradeGoal;
+    var text = "Work Type: " + workType + "<br>Work Description: " + workDesc + "<br>Due Date: " + dueDate + "<br>Exchange Type: " + exchangeType + school + "<br>Grade Goal %: " + gradeGoal;
     copyText.innerHTML = text;
     copyButton.innerHTML = "Copy Text";
     copyButton.style.backgroundColor = "green";
@@ -69,6 +69,7 @@ function checkInputs(){
     var workDesc = "";
     var dueDate = "";
     var exchangeType = "";
+    var school = "";
     var gradeGoal = "";
     if (document.getElementById("work-form-work-type").value!=""){
         workType = document.getElementById("work-form-work-type").value.trim();
@@ -82,17 +83,25 @@ function checkInputs(){
     if (document.getElementById("work-form-exchange-type").value!=""){
         exchangeType = document.getElementById("work-form-exchange-type").value;
     }
+    if (document.getElementById("work-form-school").value!="" && exchangeType=="cash-payment"){
+        school = "<br>School: " + document.getElementById("work-form-school").value;
+    }
     if (document.getElementById("work-form-grade-goal").value!=""){
         gradeGoal = document.getElementById("work-form-grade-goal").value.trim();
     }
     if (workType!="" && workDesc!="" && dueDate!=""){
         if (exchangeType!="none-selected"){
-            if (Number(gradeGoal) <= 100 && Number(gradeGoal) >= 1){
-                workFormSubmit(workType, workDesc, dueDate, exchangeType, gradeGoal);
-                showCopyText();
+            if((school!="" && exchangeType=="cash-payment") || (exchangeType!="cash-payment")){
+                if (Number(gradeGoal) <= 100 && Number(gradeGoal) >= 1){
+                    workFormSubmit(workType, workDesc, dueDate, exchangeType, school, gradeGoal);
+                    showCopyText();
+                }
+                else {
+                    alert("Grade goal % cannot be above 100 or below 1");
+                }
             }
-            else {
-                alert("Grade goal % cannot be above 100 or below 1")
+            else{
+                alert("If you are choosing cash payment, you have to list your school to see if you are eligible");
             }
         }
         else{
@@ -104,14 +113,18 @@ function checkInputs(){
     }
 }
 function copyToClipboard(){
+    var school = "";
     var workType = document.getElementById("work-form-work-type").value;
     var workDesc = document.getElementById("work-form-work-description").value;
     var dueDate = document.getElementById("work-form-due-date").value;
     var exchangeType = document.getElementById("work-form-exchange-type").value;
+    if (exchangeType=="cash-payment"){
+        school = "\r\nSchool: " + document.getElementById("work-form-school").value
+    }
     var gradeGoal = document.getElementById("work-form-grade-goal").value;
 
     var copyButton = document.getElementById("copy-text-button");
-    var text = "Work Type: " + workType + "\r\nWork Description: " + workDesc + "\r\nDue Date: " + dueDate + "\r\nExchange Type: " + exchangeType + "\r\nGrade Goal %: " + gradeGoal;
+    var text = "Work Type: " + workType + "\r\nWork Description: " + workDesc + "\r\nDue Date: " + dueDate + "\r\nExchange Type: " + exchangeType + school + "\r\nGrade Goal %: " + gradeGoal;
     console.log(text);
     navigator.clipboard.writeText(text)
       .then(() => {
@@ -122,4 +135,22 @@ function copyToClipboard(){
       .catch(err => {
         alert('Error in copying text: ', err);
       });
+}
+function showSchoolInput(){
+    var school = document.getElementsByClassName("school-cash-payment-prompt");
+    school[0].style.display = "block";
+    school[1].style.display = "block";
+}
+function hideSchoolInput(){
+    var school = document.getElementsByClassName("school-cash-payment-prompt");
+    school[0].style.display = "none";
+    school[1].style.display = "none";
+}
+function exchangeTypeSelected(){
+    var exchangeType = document.getElementById("work-form-exchange-type").value;
+    if (exchangeType=="cash-payment"){
+        showSchoolInput();
+    } else {
+        hideSchoolInput();
+    }
 }
