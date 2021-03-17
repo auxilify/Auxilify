@@ -296,7 +296,9 @@ a{
 .inputs select option{
     color: black;
 }
-
+.school-cash-payment-prompt{
+    display: none;
+}
 
 
 
@@ -576,8 +578,6 @@ a{
         font-size: 11px;
     }
 }
-
-
 @media only screen and (min-width: 240px){
     .instructions-form-container{
         flex-flow: column;
