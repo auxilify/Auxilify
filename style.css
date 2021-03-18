@@ -571,11 +571,11 @@ nav ul li a:hover{
         margin-right: 25px;
     }
     .info-container p{
-        font-size: 17px;
+        font-size: 15px;
         line-height: 150%;
     }
     .info-container ul li{
-        font-size: 17px;
+        font-size: 15px;
         line-height: 150%;
         margin-left: 25px;
     }
@@ -624,11 +624,11 @@ nav ul li a:hover{
         margin-right: 25px;
     }
     .info-container p{
-        font-size: 17px;
+        font-size: 15px;
         line-height: 150%;
     }
     .info-container ul li{
-        font-size: 17px;
+        font-size: 15px;
         line-height: 150%;
         margin-left: 25px;
     }
@@ -1066,4 +1066,4 @@ nav ul li a:hover{
         line-height: 175%;
         margin-left: 50px;
     }
-} /* */
+} /* */ 
