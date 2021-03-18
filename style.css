@@ -850,7 +850,7 @@ nav ul li a:hover{
 } /* */
 @media only screen and (min-width: 1024px){
     #policy .info-text p, #policy .info-text ul li{
-        font-size: 14px;
+        font-size: 12px;
     }
     .content h1{
         font-size: 40px;
@@ -894,11 +894,11 @@ nav ul li a:hover{
         margin-right: 25px;
     }
     .info-container p{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 175%;
     }
     .info-container ul li{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 175%;
         margin-left: 50px;
     }
