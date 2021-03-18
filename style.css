@@ -317,7 +317,7 @@ nav ul li a:hover{
 } /* iPhone 5/SE */
 @media only screen and (min-width: 360px){
     #policy .info-text p, #policy .info-text ul li{
-        font-size: 12px;
+        font-size: 10px;
     }
     .content h1{
         font-size: 20px;
@@ -359,12 +359,12 @@ nav ul li a:hover{
         margin-right: 25px;
     }
     .info-container ul li{
-        font-size: 15px;
+        font-size: 12px;
         line-height: 150%;
         margin-left: 25px;
     }
     .info-container p{
-        font-size: 14.5px;
+        font-size: 12px;
         line-height: 130%;
     }
 } /* Moto G4, Galaxy S5 */
@@ -796,7 +796,7 @@ nav ul li a:hover{
 } /* iPad */
 @media only screen and (min-width: 900px){
     #policy .info-text p, #policy .info-text ul li{
-        font-size: 15px;
+        font-size: 10px;
     }
     .content h1{
         font-size: 35px;
@@ -839,11 +839,11 @@ nav ul li a:hover{
         width: 60%;
     }
     .info-container p{
-        font-size: 20px;
+        font-size: 13px;
         line-height: 175%;
     }
     .info-container ul li{
-        font-size: 20px;
+        font-size: 13px;
         line-height: 175%;
         margin-left: 50px;
     }
