@@ -960,10 +960,10 @@ nav ul li a:hover{
 } /* iPad Pro */
 @media only screen and (min-width: 1280px){
     #policy .info-text p, #policy .info-text ul li{
-        font-size: 16px;
+        font-size: 13px;
     }
     .content h1{
-        font-size: 35px;
+        font-size: 55px;
         margin: 30px 80px;
         text-align: center;
     }
@@ -983,7 +983,7 @@ nav ul li a:hover{
         padding-left: 60px;
     }
     .info-container h1{
-        font-size: 50px;
+        font-size: 70px;
         margin-bottom: 30px;
     }
     .info-container span .info-text{
@@ -1003,16 +1003,15 @@ nav ul li a:hover{
         width: 60%;
     }
     .info-container p{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 175%;
     }
     .info-container ul li{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 175%;
         margin-left: 50px;
     }
-    
-} /* */
+} /* */ 
 @media only screen and (min-width: 1440px){
     #policy .info-text p, #policy .info-text ul li{
         font-size: 14px;
